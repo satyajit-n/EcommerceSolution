@@ -1,0 +1,81 @@
+{
+  "Routes": [
+    //Customer Web API
+    {
+      "UpstreamPathTemplate": "/api/Customer",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7144
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Customer"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Customer/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7144
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Customer/{id}"
+    },
+    //Order Web API
+    {
+      "UpstreamPathTemplate": "/api/Order",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7188
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Order"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Order/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7188
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Order/{id}"
+    },
+
+    //Product Web API
+    {
+      "UpstreamPathTemplate": "/api/Product",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7243
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Product"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Product/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7243
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Product/{id}"
+    }
+  ],
+  "GlobalConfiguration": {}
+}
